@@ -31,6 +31,14 @@ class DeveloperSpec: XCTestCase {
             print(developer)
             return developer.numberOfMaxibonsToGrap >= 0
         }
+        
+        property("The number of maxibons is asigned if is positive or zero")
+            <- forAll { (positiveNumber: NonNegative<Int>) in
+                let numberOfMaxibons = positiveNumber.getNonNegative
+                let developer = Developer(name: self.anyName, numberOfMaxibonsToGrap: numberOfMaxibons)
+                return developer.numberOfMaxibonsToGrap == numberOfMaxibons
+        }
+
     }
 
 }
