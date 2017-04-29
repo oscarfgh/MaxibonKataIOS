@@ -8,8 +8,18 @@
 
 import Foundation
 
-final public class KarumiHQs {
+public final class KarumiHQs {
+    fileprivate let chat : Chat
     var maxibonsLeft = 10
+    
+    public init(chat: Chat) {
+        self.maxibonsLeft = 10
+        self.chat = chat
+    }
+    
+    public convenience init() {
+        self.init(chat: Slack())
+    }
     
     func openFridge(developer : Developer) {
         maxibonsLeft -= developer.numberOfMaxibonsToGrap
@@ -19,6 +29,7 @@ final public class KarumiHQs {
         }
         
         if maxibonsLeft <= 2 {
+           notifyWeShouldBuyMaxibons(developer)
            maxibonsLeft += 10
         }
     }
@@ -27,5 +38,10 @@ final public class KarumiHQs {
         for developer in developers {
             openFridge(developer: developer)
         }
+    }
+    
+    fileprivate func notifyWeShouldBuyMaxibons(_ developer: Developer) {
+        let message = "Hi guys, I'm \(developer). We need more maxibons!"
+        chat.send(message: message)
     }
 }
