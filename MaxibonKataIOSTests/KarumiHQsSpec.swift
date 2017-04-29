@@ -21,7 +21,16 @@ class KarumiHQsSpec: XCTestCase {
             
             let karumiHQs = KarumiHQs()
             karumiHQs.openFridge(developer: developer)
-            print(karumiHQs)
+
+            return karumiHQs.maxibonsLeft > 2
+        }
+        
+        property("The number of maxibons left can not be lower than two") <- forAll{ (devs : [Developer]) in
+            print(devs)
+            
+            let karumiHQs = KarumiHQs()
+            karumiHQs.openFridge(developers: devs)
+
             return karumiHQs.maxibonsLeft > 2
         }
     }
