@@ -15,6 +15,7 @@
 		D27948BE1EB4963A00E0F2CE /* KarumiHQsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27948BD1EB4963A00E0F2CE /* KarumiHQsSpec.swift */; };
 		D27948C01EB49D6400E0F2CE /* ArbitraryDevelopers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27948BF1EB49D6400E0F2CE /* ArbitraryDevelopers.swift */; };
 		D27948C21EB4A46F00E0F2CE /* MockSlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27948C11EB4A46F00E0F2CE /* MockSlack.swift */; };
+		D27948C41EB4AAD000E0F2CE /* ArbitraryKarumiHQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27948C31EB4AAD000E0F2CE /* ArbitraryKarumiHQs.swift */; };
 		EBC26D0B1D24415F00838900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0A1D24415F00838900 /* AppDelegate.swift */; };
 		EBC26D0D1D24415F00838900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0C1D24415F00838900 /* ViewController.swift */; };
 		EBC26D101D24415F00838900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC26D0E1D24415F00838900 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		D27948BD1EB4963A00E0F2CE /* KarumiHQsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarumiHQsSpec.swift; sourceTree = "<group>"; };
 		D27948BF1EB49D6400E0F2CE /* ArbitraryDevelopers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArbitraryDevelopers.swift; sourceTree = "<group>"; };
 		D27948C11EB4A46F00E0F2CE /* MockSlack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSlack.swift; sourceTree = "<group>"; };
+		D27948C31EB4AAD000E0F2CE /* ArbitraryKarumiHQs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArbitraryKarumiHQs.swift; sourceTree = "<group>"; };
 		E8BFEA222C6BA5A65940E65E /* Pods-MaxibonKataIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS.release.xcconfig"; sourceTree = "<group>"; };
 		EBC26D071D24415F00838900 /* MaxibonKataIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaxibonKataIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC26D0A1D24415F00838900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				D27948BF1EB49D6400E0F2CE /* ArbitraryDevelopers.swift */,
+				D27948C31EB4AAD000E0F2CE /* ArbitraryKarumiHQs.swift */,
 			);
 			name = Generators;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				D27948BE1EB4963A00E0F2CE /* KarumiHQsSpec.swift in Sources */,
 				D27948C21EB4A46F00E0F2CE /* MockSlack.swift in Sources */,
 				D27948B91EB48D4400E0F2CE /* DeveloperSpec.swift in Sources */,
+				D27948C41EB4AAD000E0F2CE /* ArbitraryKarumiHQs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

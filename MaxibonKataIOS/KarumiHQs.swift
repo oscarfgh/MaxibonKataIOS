@@ -17,6 +17,11 @@ public final class KarumiHQs {
         self.chat = chat
     }
     
+    public init(maxibonsLeft: Int) {
+        self.maxibonsLeft = maxibonsLeft
+        self.chat = Slack()
+    }
+    
     public convenience init() {
         self.init(chat: Slack())
     }

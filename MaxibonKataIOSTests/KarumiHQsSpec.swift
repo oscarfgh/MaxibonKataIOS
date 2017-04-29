@@ -44,13 +44,24 @@ class KarumiHQsSpec: XCTestCase {
                 
         }
     
-//        property("If there are two maxibons after opening the fridge the developer not sends a message to buy more")
-//            <- forAll(Developer.arbitraryHungry) { (developer: Developer) in
-//                let chat = MockChat()
-//                let karumiHQs = KarumiHQs(chat: chat)
-//                karumiHQs.openFridge(developer: developer)
-//                return chat.messageSent == nil
-//        }
+        property("If there are two maxibons after opening the fridge the developer not sends a message to buy more")
+            <- forAll(Developer.arbitraryNotSoHungry) { (developer: Developer) in
+                let chat = MockChat()
+                let karumiHQs = KarumiHQs(chat: chat)
+                karumiHQs.openFridge(developer: developer)
+                return chat.messageSent == nil
+        }
+        
+        property("The number of maxibons left can not be lower than two") <- forAll(Developer.arbitraryNotSoHungry, KarumiHQs.arbitrary) { (developer: Developer, karumiHQs: KarumiHQs) in
+            print(developer)
+            
+            karumiHQs.openFridge(developer: developer)
+            
+            print("KarumiHQs maxibonleft \(karumiHQs.maxibonsLeft)")
+            
+            return karumiHQs.maxibonsLeft > 2
+        }
+    
     }
     
     func testGetFourMaxibons() {
