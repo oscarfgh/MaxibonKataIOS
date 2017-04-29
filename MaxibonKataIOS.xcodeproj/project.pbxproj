@@ -117,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC26D2A1D2441F800838900 /* Domain */,
+				D27948B51EB48BB400E0F2CE /* Developer.swift */,
 				EBC26D0A1D24415F00838900 /* AppDelegate.swift */,
 				EBC26D0C1D24415F00838900 /* ViewController.swift */,
 				EBC26D0E1D24415F00838900 /* Main.storyboard */,
@@ -143,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				EBCD24271D2457310007923F /* Chat */,
-				D27948B51EB48BB400E0F2CE /* Developer.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
