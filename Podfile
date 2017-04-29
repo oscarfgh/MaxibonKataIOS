@@ -4,6 +4,7 @@ target 'MaxibonKataIOS' do
   target 'MaxibonKataIOSTests' do
     inherit! :search_paths
     pod 'SwiftCheck'
+    pod 'Nimble'
   end
 
 end 

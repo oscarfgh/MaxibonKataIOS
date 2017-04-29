@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import SwiftCheck
+import Nimble
 
 @testable import MaxibonKataIOS
 
@@ -42,5 +43,22 @@ class KarumiHQsSpec: XCTestCase {
                 return chat.messageSent == "Hi guys, I'm \(developer). We need more maxibons!"
                 
         }
+    
+//        property("If there are two maxibons after opening the fridge the developer not sends a message to buy more")
+//            <- forAll(Developer.arbitraryHungry) { (developer: Developer) in
+//                let chat = MockChat()
+//                let karumiHQs = KarumiHQs(chat: chat)
+//                karumiHQs.openFridge(developer: developer)
+//                return chat.messageSent == nil
+//        }
+    }
+    
+    func testGetFourMaxibons() {
+        let developer = Developer(name: "Pedro", numberOfMaxibonsToGrap: 4)
+        let karumiHQs = KarumiHQs()
+        
+        karumiHQs.openFridge(developer: developer)
+        
+        expect(karumiHQs.maxibonsLeft).to(equal(6))
     }
 }
